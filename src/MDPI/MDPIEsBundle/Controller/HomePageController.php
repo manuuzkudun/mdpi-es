@@ -4,10 +4,10 @@ namespace MDPI\MDPIEsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class HomePageController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('MDPIEsBundle:Default:index.html.twig');
+        return $this->render('MDPIEsBundle:HomePage:index.html.twig');
     }
 }
