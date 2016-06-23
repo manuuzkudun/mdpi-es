@@ -1,0 +1,3 @@
+mdpi_es_homepage:
+    path:     /
+    defaults: { _controller: MDPIEsBundle:Default:index }
