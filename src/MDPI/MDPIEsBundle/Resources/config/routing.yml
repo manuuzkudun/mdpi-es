@@ -1,3 +1,8 @@
 mdpi_es_homepage:
     path:     /
     defaults: { _controller: MDPIEsBundle:HomePage:index}
+
+mdpi_es_aboutpage:
+    path:     /about
+    defaults: { _controller: MDPIEsBundle:AboutPage:index}
+
