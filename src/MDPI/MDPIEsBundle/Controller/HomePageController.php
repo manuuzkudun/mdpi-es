@@ -8,6 +8,6 @@ class HomePageController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('MDPIEsBundle:HomePage:index.html.twig');
+        return $this->render('MDPIEsBundle:Home:index.html.twig');
     }
 }

@@ -2,7 +2,29 @@ mdpi_es_homepage:
     path:     /
     defaults: { _controller: MDPIEsBundle:HomePage:index}
 
-mdpi_es_aboutpage:
-    path:     /about
-    defaults: { _controller: MDPIEsBundle:AboutPage:index}
+mdpi_es_history:
+    path:     /about/history
+    defaults: { _controller: MDPIEsBundle:AboutPage:history}
+    
+mdpi_es_profile:
+    path:     /about/company-profile
+    defaults: { _controller: MDPIEsBundle:AboutPage:profile}
+    
+mdpi_es_team:
+    path:     /about/team
+    defaults: { _controller: MDPIEsBundle:AboutPage:team}
+    
+mdpi_es_journals:
+    path:     /about/journals
+    defaults: { _controller: MDPIEsBundle:AboutPage:journals}
+    
+mdpi_es_contact:
+    path:     /contact
+    defaults: { _controller: MDPIEsBundle:ContactPage:contact}
+
+
+mdpi_es_jobs:
+    path:     /jobs
+    defaults: { _controller: MDPIEsBundle:JobsPage:jobs}
+
 
