@@ -4,20 +4,14 @@
   <title>{% block title %} MDPI.es{% endblock %}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% block stylesheets %}
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  {% endblock %}
+
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 450px}
-    
-
     
     /* Set black background color, white text and some padding */
     footer {
@@ -34,7 +28,6 @@
 </head>
 <body>
 
-
   
 <div class="container-fluid text-center">
 <!-- Main navigation -->
@@ -49,6 +42,11 @@
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
+
+{% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+{% endblock %}
 
 </body>
 </html>

@@ -645,6 +645,34 @@
             "time": "2014-09-09 13:34:57"
         },
         {
+            "name": "mdpi/app-bundle",
+            "version": "dev-master",
+            "target-dir": "MDPI/AppBundle",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@dev.mdpi.lab:22/~/projects/bundles/AppBundle.git",
+                "reference": "de30d975026095f4b0119acfa7719168dd916d0a"
+            },
+            "require": {
+                "php": ">=5.5.1"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "MDPI\\AppBundle\\": ""
+                }
+            },
+            "description": "MDPIAppBundle",
+            "homepage": "http://www.mdpi.com",
+            "time": "2016-04-07 07:49:03"
+        },  
+        
+        {
             "name": "doctrine/orm",
             "version": "v2.4.8",
             "source": {
@@ -2173,9 +2201,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+		"mdpi/app-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
