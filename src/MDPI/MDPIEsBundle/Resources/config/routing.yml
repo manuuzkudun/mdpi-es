@@ -10,6 +10,10 @@ _profile:
     path:     /about/company-profile
     defaults: { _controller: MDPIEsBundle:AboutPage:profile}
     
+_president:
+    path:     /about/president
+    defaults: { _controller: MDPIEsBundle:AboutPage:president}
+    
 _team:
     path:     /about/team
     defaults: { _controller: MDPIEsBundle:AboutPage:team}

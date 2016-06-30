@@ -16,6 +16,11 @@ class AboutPageController extends Controller
         return $this->render('MDPIEsBundle:About:profile.html.twig');
     }	
 	
+	public function presidentAction()
+    {
+        return $this->render('MDPIEsBundle:About:president.html.twig');
+    }
+	
 	public function teamAction()
     {
         return $this->render('MDPIEsBundle:About:team.html.twig');
