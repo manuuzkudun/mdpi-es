@@ -32,7 +32,6 @@
 <!-- Main navigation -->
 {{ include('MDPIEsBundle::main_navigation.html.twig') }}
 
-  
  <div class="container">
   <div class="row">
 	{% block content %} {% endblock %}
@@ -40,11 +39,9 @@
 </div>
 
 <hr>
-<footer class="container-fluid text-center">
-  <p>&copy; 2016 MDPI SL.</p>
-</footer>
 
-
+<!-- Main navigation -->
+{{ include('MDPIEsBundle::footer.html.twig') }}
 
 {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
