@@ -28,20 +28,21 @@
 </head>
 <body>
 
-  
-<div class="container-fluid">
+
 <!-- Main navigation -->
 {{ include('MDPIEsBundle::main_navigation.html.twig') }}
 
-  <div class="row content">
+  
+ <div class="container">
+  <div class="row">
 	{% block content %} {% endblock %}
-  </div>
-  
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
-  
+  </div>  
 </div>
+
+<hr>
+<footer class="container-fluid text-center">
+  <p>&copy; 2016 MDPI SL.</p>
+</footer>
 
 
 
