@@ -10,6 +10,9 @@
 
   <style>
   
+  body{ 
+  background-color: #F8F7F7;
+  }
   	p{
   	font-size: 16px;
   	}
@@ -83,19 +86,16 @@
 	
 	}
     
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
     
     footer#main-footer{
       background-color: #1F1D33;
       color: white;
       padding: 15px;
     }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .row.content {height:auto;}
+    .main-content{
+    height: 800px;
     }
+
   </style>
 </head>
 <body>
@@ -111,9 +111,9 @@
 
 
 
- <div class="container" style="border: 1px solid #999;padding:0;">
+ <div class="container" style="border: 1px solid #999;padding:0;background-color:white;">
 	<!--Page content -->
-	<div style="margin: 40px auto;padding: 20px;border:">
+	<div style="margin: 40px auto;padding: 20px;height:800px;">
 		{% block content %} {% endblock %}
 	</div>
 </div>
