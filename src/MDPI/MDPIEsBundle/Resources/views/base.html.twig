@@ -29,6 +29,7 @@
   	}
   	#main-nav a.nav-link{
   		color: white;
+  		font-weight:bold;
   	}
   	#main-nav a.nav-link:hover{
   		color: #E6B043;
@@ -36,12 +37,17 @@
   	.dropdown-menu>li>a:hover{
   		background-color: #E6B043;
   	}
+  	.dropdown-menu>li>a {
+  	color:white;
+  	font-weight:bold;
+  	}
   	
   	
     .about-titulo{
     color: #48516D;
     margin: 40px auto;
     font-weight: bold;
+    text-shadow: 1px 1px #999;
     }
     .about-content p{
 		line-height: 25px;
@@ -63,12 +69,25 @@
     	font-style:italic;
     }
     
+    .navbar{
+    margin:0;
+    }
+    
+    .navbar-inverse {
+    	background-color: #1F1D33;
+    	border-color: #1F1D33;
+	}
+	
+	.navbar-nav>li>.dropdown-menu{
+		background-color: #1F1D33;
+	
+	}
+    
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 450px}
     
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
+    footer#main-footer{
+      background-color: #1F1D33;
       color: white;
       padding: 15px;
     }
@@ -80,20 +99,33 @@
   </style>
 </head>
 <body>
+<div style="background-color: #565B79;">
+	<div class="container" style="padding:0;">
+	<!-- Header -->
+	{{ include('MDPIEsBundle::header.html.twig') }}
+ 	<!-- Main navigation -->
+	{{ include('MDPIEsBundle::main_navigation.html.twig') }}
+	</div>
 
-
-<!-- Main navigation -->
-{{ include('MDPIEsBundle::main_navigation.html.twig') }}
-
- <div class="container">
-
-	{% block content %} {% endblock %}
 </div>
 
-<hr>
 
-<!-- Main navigation -->
-{{ include('MDPIEsBundle::footer.html.twig') }}
+
+ <div class="container" style="border: 1px solid #999;padding:0;">
+	<!--Page content -->
+	<div style="margin: 40px auto;padding: 20px;border:">
+		{% block content %} {% endblock %}
+	</div>
+</div>
+
+
+<div style="background-color: #565B79;">
+	<div class="container" style="padding:0;">
+	<!-- Footer -->
+	{{ include('MDPIEsBundle::footer.html.twig') }}
+	</div>
+
+</div>
 
 {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
