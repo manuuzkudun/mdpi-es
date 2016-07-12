@@ -7,6 +7,7 @@
   {% block stylesheets %}
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="/css/jquery.bxslider.css" rel="stylesheet" />
   {% endblock %}
 
   <style>
@@ -233,6 +234,14 @@
 {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="/js/jquery.bxslider.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+	  $('.bxslider').bxSlider();
+	});
+
+  </script>
+
 {% endblock %}
 
 </body>
