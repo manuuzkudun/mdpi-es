@@ -654,7 +654,7 @@
                 "reference": "de30d975026095f4b0119acfa7719168dd916d0a"
             },
             "require": {
-                "php": ">=5.5.1"
+                "php": ">=5.3.9"
             },
             "type": "symfony-bundle",
             "extra": {

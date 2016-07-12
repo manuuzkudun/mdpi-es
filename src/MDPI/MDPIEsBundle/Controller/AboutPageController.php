@@ -3,6 +3,7 @@
 namespace MDPI\MDPIEsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use MDPI\AppBundle\Entity\JournalRepository;
 
 class AboutPageController extends Controller
 {
@@ -40,6 +41,9 @@ class AboutPageController extends Controller
     			'currentIssue' => 1,
 			 ),
 		);
+		
+		$journals = JournalRepository::getAllPublicJournals();
+		
 		return $this->render('MDPIEsBundle:About:journals.html.twig', array(
             'journals' => $journals
         ));
