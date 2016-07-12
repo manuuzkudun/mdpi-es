@@ -28,7 +28,21 @@ class AboutPageController extends Controller
 	
 	public function journalsAction()
     {
-        return $this->render('MDPIEsBundle:About:journals.html.twig');
+    	$journals = array(
+    		array(
+    			'journal_url' => "http://www.mdpi.com/journal/actuators",
+    			'logoFilenameWithHash' => "http://img.mdpi.org/img/journals/actuators-logo.png",
+    			'nameSystem' => "actuators",
+    			'nameShort' => "actuators",
+    			'nameFull' => "Actuators",
+    			'issnElectronic' => "2076-0825",
+    			'establishedYear' => "2012",
+    			'currentIssue' => 1,
+			 ),
+		);
+		return $this->render('MDPIEsBundle:About:journals.html.twig', array(
+            'journals' => $journals
+        ));
     }
 	
 }

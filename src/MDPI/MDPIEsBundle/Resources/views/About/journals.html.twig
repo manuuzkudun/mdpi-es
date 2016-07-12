@@ -1,13 +1,32 @@
 {% extends "MDPIEsBundle::base.html.twig" %}
 
-{% block title %}
-Revistas de MDPI
-{% endblock %}
+{% block title %}MDPI | Revistas{% endblock %}
 
 {% block content %}
 
 <h2 class= "about-titulo">Revistas de MDPI</h2>
-Lista de revistas
-Nombre, ISSN, Fecha de creación, artículo
+<table id="journaltable" class="tablesorter" border="0" cellpadding="3" cellspacing="0">
+	<thead>
+	<tr style='font-size: 10pt;'>
+		<th></th>
+		<th>Journal Name</th>
+		<th>ISSN Number</th>
+		<th>Established</th>
+		<th filter='false'>Current Issue</th>
+		<th filter='false'>Articles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	</tr>
+	</thead>
+	<tbody>
+    {% for journal in journals %}
+    {% set journal_url = journal.journal_url %}
+		<tr style='font-size: 10pt;'>
+			<td><a href="{{ journal_url }}"><img src="{{ journal.logoFilenameWithHash }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" border="0" height="70"></a></td>
+			<td style='vertical-align:middle;'><a href="{{ journal_url }}">{{ journal.nameFull }}</a></td>
+			<td style='vertical-align:middle;' align="center">ISSN {{ journal.issnElectronic }}</td>
+			<td style='vertical-align:middle;' align="center">{{ journal.establishedYear }}</td
+		</tr>
+{% endfor %}
+	</tbody>
+</table>
 
 {% endblock %}
