@@ -670,7 +670,34 @@
             "description": "MDPIAppBundle",
             "homepage": "http://www.mdpi.com",
             "time": "2016-04-07 07:49:03"
-        },  
+        },
+        {
+            "name": "mdpi/gfinder-bundle",
+            "version": "dev-master",
+            "target-dir": "MDPI/GFinderBundle",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@dev.mdpi.lab:22/~/projects/bundles/gfinder.git",
+                "reference": "13fd01a7cfa4ad2109a44c28481cc9eb4e762ba2"
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "GFinder\\": "MDPI/GFinderBundle/lib"
+                }
+            },
+            "description": "MDPIGFinderBundle",
+            "homepage": "http://www.mdpi.com",
+            "time": "2014-02-24 09:00:07"
+        }, 
         
         {
             "name": "doctrine/orm",
@@ -2202,7 +2229,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-		"mdpi/app-bundle": 20
+		"mdpi/app-bundle": 20,
+		"mdpi/gfinder-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
