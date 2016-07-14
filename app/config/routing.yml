@@ -3,5 +3,5 @@ mdpi_es:
     prefix:   /
 
 app:
-    resource: "@AppBundle/Controller/"
+    resource: "@MDPIAppBundle/Controller/"
     type:     annotation

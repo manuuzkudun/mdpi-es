@@ -42,11 +42,10 @@ class AboutPageController extends Controller
 			 ),
 		);
 		
-		$journals = JournalRepository::getAllPublicJournals();
+ 		$journals = JournalRepository::getAllPublicJournals();
 		
 		return $this->render('MDPIEsBundle:About:journals.html.twig', array(
             'journals' => $journals
         ));
     }
-	
 }
