@@ -1,5 +1,16 @@
 imports:
     - { resource: config.yml }
+    
+    
+parameters:
+    static_base_url: '' 
+    sphinx:
+        host: localhost
+        port: 9312
+    redis:
+        host: localhost
+        port: 6379
+    banners_url: http://serve.mdpi.com
 
 framework:
     router:
@@ -32,3 +43,36 @@ monolog:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+doctrine:
+    dbal:
+        connections:
+            default:
+                driver:   pdo_mysql
+                host:     localhost
+                port:     3306
+                dbname:   mdpipub
+                user:     root
+                password: alpha1
+                charset:  UTF8
+            slave:
+                driver:   pdo_mysql
+                host:     localhost
+                port:     3306
+                dbname:   mdpipub
+                user:     root
+                password: alpha1
+                charset:  UTF8
+    orm:
+        default_entity_manager: default
+        entity_managers:
+            default:
+                connection: default
+                mappings:
+                    MDPIAppBundle:  ~
+                    MDPIEsBundle: ~
+            slave:
+                connection: slave
+                mappings:
+                    MDPIAppBundle:  ~
+                    MDPIEsBundle: ~
