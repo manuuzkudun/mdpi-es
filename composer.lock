@@ -678,7 +678,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@dev.mdpi.lab:22/~/projects/bundles/gfinder.git",
-                "reference": "12be34d26a1ff28930759f34547fc1ac5b0693c4"
+                "reference": "2fa3ba3248e70a23bddbf280f608a1938e33e897"
             },
             "require": {
                 "php": ">=5.3.3"
