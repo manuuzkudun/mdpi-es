@@ -4,6 +4,7 @@ namespace MDPI\MDPIEsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use MDPI\AppBundle\Entity\JournalRepository;
+use MDPI\AppBundle\Entity\ArticleRepository;
 
 class AboutPageController extends Controller
 {
@@ -29,23 +30,14 @@ class AboutPageController extends Controller
 	
 	public function journalsAction()
     {
-    	$journals = array(
-    		array(
-    			'journal_url' => "http://www.mdpi.com/journal/actuators",
-    			'logoFilenameWithHash' => "http://img.mdpi.org/img/journals/actuators-logo.png",
-    			'nameSystem' => "actuators",
-    			'nameShort' => "actuators",
-    			'nameFull' => "Actuators",
-    			'issnElectronic' => "2076-0825",
-    			'establishedYear' => "2012",
-    			'currentIssue' => 1,
-			 ),
-		);
+
 		
  		$journals = JournalRepository::getAllPublicJournals();
+		$articlesStats = ArticleRepository::getStatsByJournals($journals);
 		
 		return $this->render('MDPIEsBundle:About:journals.html.twig', array(
-            'journals' => $journals
+            'journals' => $journals,
+            'articles_stats' => $articlesStats
         ));
     }
 }

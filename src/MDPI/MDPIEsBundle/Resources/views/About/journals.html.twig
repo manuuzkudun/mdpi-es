@@ -9,21 +9,35 @@
 	<thead>
 	<tr style='font-size: 10pt;'>
 		<th></th>
-		<th>Journal Name</th>
-		<th>ISSN Number</th>
+		<th>Nombre</th>
+		<th>ISSN</th>
 		<th>Established</th>
-		<th filter='false'>Current Issue</th>
-		<th filter='false'>Articles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th filter='false'>Número Actual</th>
+		<th filter='false'>Artículos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 	</tr>
 	</thead>
 	<tbody>
     {% for journal in journals %}
-    {% set journal_url = journal.journal_url %}
+    {% set journal_url = '#' %}
 		<tr style='font-size: 10pt;'>
-			<td><a href="{{ journal_url }}"><img src="{{ journal.logoFilenameWithHash }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" border="0" height="70"></a></td>
+			<td><a href="{{ journal_url }}"><img src="{{ "http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}" }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" border="0" height="70"></a></td>
 			<td style='vertical-align:middle;'><a href="{{ journal_url }}">{{ journal.nameFull }}</a></td>
 			<td style='vertical-align:middle;' align="center">ISSN {{ journal.issnElectronic }}</td>
-			<td style='vertical-align:middle;' align="center">{{ journal.establishedYear }}</td
+			<td style='vertical-align:middle;' align="center">{{ journal.establishedYear }}</td>
+			<td style='vertical-align:middle;' align="center">
+            {% if journal.currentIssue > 0 %}
+                {% set current_issue_obj = journal.currentIssueObj() %}
+                <a href="#">
+                    v.{{ current_issue_obj.Volume.number }}({{ current_issue_obj.number }}):{{ current_issue_obj.pages() }}<br>{{ current_issue_obj.month[0:3] }} {{ current_issue_obj.Volume.year }}
+                </a>
+            {% elseif journal.forthcomingIssue %}
+                {% set forthcoming_issue_obj = journal.forthcomingIssueObj() %}
+                <a href="#">Forthcoming <br>Issue</a>
+            {% else %}
+                <em>No issue<br> available</em>
+            {% endif %}
+            </td>
+           	<td style='vertical-align:middle;' align="center">{% if articles_stats[journal.id] is defined %}<a href="#">{{ articles_stats[journal.id] }}</a>{% else %}0{% endif %}</td>
 		</tr>
 {% endfor %}
 	</tbody>
