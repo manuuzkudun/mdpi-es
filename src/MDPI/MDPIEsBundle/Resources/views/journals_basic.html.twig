@@ -4,9 +4,16 @@
 	<div class="row">
 		{% for journal in set %}
 		<div class="col-sm-6">
-				<li style="list-style: none;"><a href="#"><img src="{{ "http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}" }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" height="70"></a></li>
-		</div>
+				<li style="list-style: none;margin: 10px 0;">
+					<a href="#"><img src="{{ "http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}" }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" height="50"></a>
+					<div style="display: inline;float: right; background-color: #FFB800; width: 50px;height:50px;font-weight:bold;border-radius:50%;margin-right:20px;">
+						<p style="text-align:center; margin-top:15px;font-size: 13px;">{{journal.impactFactor|default(0)}}</p>
+					</div>
+				</li>
+			</div>
 		{% endfor %}
 	</div>	
 {% endfor %}
 </ul>
+
+

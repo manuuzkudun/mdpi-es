@@ -10,8 +10,12 @@ class HomePageController extends Controller
     public function indexAction()
     {
     	
-		$journals = JournalRepository::getAllPublicJournals();
-		$journals = array_slice($journals, 0, 12);
+		$journalNames = array('energies','entropy','forests','ijerph','ijms','marinedrugs',
+		'materials','molecules','nutrients','polymers','remotesensing','sensors','toxins','viruses',
+		'water','symmetry','sustainability','micromachines','atmosphere','applsci','catalysts','genes',
+		'metals','minerals','nanomaterials');
+		$journals = JournalRepository::getByNameSystems($journalNames);
+		#$journals = array_slice($journals, 50, 10);
 		
         return $this->render('MDPIEsBundle:Home:index.html.twig',array(
 			
