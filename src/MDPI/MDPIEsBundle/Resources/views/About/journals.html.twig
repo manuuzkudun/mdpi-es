@@ -9,9 +9,9 @@
 	<thead>
 	<tr style='font-size: 10pt;'>
 		<th></th>
-		<th>Nombre</th>
+		<th style= "width:300px;" >Nombre</th>
 		<th>ISSN</th>
-		<th>Established</th>
+		<th>Establecida</th>
 		<th filter='false'>Número Actual</th>
 		<th filter='false'>Artículos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 	</tr>
@@ -21,10 +21,10 @@
     {% set journal_url = '#' %}
 		<tr style='font-size: 10pt;'>
 			<td><a href="{{ journal_url }}"><img src="{{ "http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}" }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" border="0" height="70"></a></td>
-			<td style='vertical-align:middle;'><a href="{{ journal_url }}">{{ journal.nameFull }}</a></td>
-			<td style='vertical-align:middle;' align="center">ISSN {{ journal.issnElectronic }}</td>
-			<td style='vertical-align:middle;' align="center">{{ journal.establishedYear }}</td>
-			<td style='vertical-align:middle;' align="center">
+			<td style="width:250px;"><a href="{{ journal_url }}">{{ journal.nameFull }}</a></td>
+			<td style="width:150px;">ISSN {{ journal.issnElectronic }}</td>
+			<td style="text-align:center; width:150px;">{{ journal.establishedYear }}</td>
+			<td style=" width:200px;">
             {% if journal.currentIssue > 0 %}
                 {% set current_issue_obj = journal.currentIssueObj() %}
                 <a href="#">
