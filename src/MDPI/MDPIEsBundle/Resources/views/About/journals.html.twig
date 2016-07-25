@@ -8,23 +8,23 @@
 <table id="journaltable" class="tablesorter" border="0" cellpadding="3" cellspacing="0">
 	<thead>
 	<tr style='font-size: 10pt;'>
-		<th></th>
-		<th style= "width:300px;" >Nombre</th>
-		<th>ISSN</th>
-		<th>Establecida</th>
-		<th filter='false'>Número Actual</th>
-		<th filter='false'>Artículos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th  width="20%" ></th>
+		<th width="20%" align="center">Nombre</th>
+		<th width="15%" align="center">ISSN</th>
+		<th width="15%" align="center">Establecida</th>
+		<th width="10%" align="center">Número Actual</th>
+		<th width="20%" align="center">Artículos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 	</tr>
 	</thead>
 	<tbody>
     {% for journal in journals %}
     {% set journal_url = '#' %}
 		<tr style='font-size: 10pt;'>
-			<td><a href="{{ journal_url }}"><img src="{{ "http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}" }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" border="0" height="70"></a></td>
-			<td style="width:250px;"><a href="{{ journal_url }}">{{ journal.nameFull }}</a></td>
-			<td style="width:150px;">ISSN {{ journal.issnElectronic }}</td>
-			<td style="text-align:center; width:150px;">{{ journal.establishedYear }}</td>
-			<td style=" width:200px;">
+			<td width="20%" align="left"><a href="{{ journal_url }}"><img src="{{ "http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}" }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" border="0" height="70"></a></td>
+			<td width="20%" align="left"><a href="{{ journal_url }}">{{ journal.nameFull }}</a></td>
+			<td width="10%" align="left">ISSN {{ journal.issnElectronic }}</td>
+			<td width="10%" align="left">{{ journal.establishedYear }}</td>
+			<td width="20%" align="left">
             {% if journal.currentIssue > 0 %}
                 {% set current_issue_obj = journal.currentIssueObj() %}
                 <a href="#">
@@ -37,7 +37,7 @@
                 <em>No issue<br> available</em>
             {% endif %}
             </td>
-           	<td style='vertical-align:middle;' align="center">{% if articles_stats[journal.id] is defined %}<a href="#">{{ articles_stats[journal.id] }}</a>{% else %}0{% endif %}</td>
+           	<td width="20%" align="left">{% if articles_stats[journal.id] is defined %}<a href="#">{{ articles_stats[journal.id] }}</a>{% else %}0{% endif %}</td>
 		</tr>
 {% endfor %}
 	</tbody>
