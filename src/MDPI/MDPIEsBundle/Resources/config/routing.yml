@@ -28,8 +28,13 @@ _contact:
 
 
 _jobs:
-    path:     /jobs
+    path:     /jobs/index
     defaults: { _controller: MDPIEsBundle:JobsPage:jobs}
+    
+    
+_job:
+    path:     /jobs/{slug}
+    defaults: { _controller: MDPIEsBundle:JobsPage:jobAd}
     
 
 
