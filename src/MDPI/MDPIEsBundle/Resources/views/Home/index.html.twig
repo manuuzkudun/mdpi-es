@@ -8,9 +8,9 @@ Pagina inicio MDPI.es
 {% block content %}
 <div style="margin: 0 60px;">
 <div class="row">
-	<div class="col-sm-6">
+	<div class="col-md-6">
 		<div style="vertical-align: middle;">
-			<p><strong>MDPI Spain, S.L.</strong> fue fundada en marzo de 2016, cuando se abrió su <strong>oficina de Barcelona</strong>, como parte del departamento de edición, 
+			<p>MDPI Spain, S.L. fue fundada en marzo de 2016, cuando se abrió su oficina de Barcelona, como parte del departamento de edición, 
 		ventas y afiliaciones (Membership Program) de la empresa. Actualmente emplea a 22 personas con formación de doctorado y máster 
 		en diferentes disciplinas como física, química, biología, biomedicina, filosofía y ciencias sociales.</p>
 		<p>MDPI publica actualmente más de 160 <a href="{{ path('_journals') }}">revistas científicas</a>, incluyendo <a class="journalName" href = "http://www.mdpi.com/journal/molecules">Molecules</a>, 
@@ -20,7 +20,7 @@ entre ellos, contamos también con ganadores de Premios Nobel. Al día de hoy, m
 <a href = "http://www.mdpi.com">nuestra web internacional</a>.</p>
 		</div>
 	</div>
-	<div class="col-sm-6">
+	<div class="col-md-6">
 		<div class="pull-right" style="margin-bottom: 60px;">
 			<img class="img-thumbnail" src="/images/barcelona-image.jpg" alt="Barcelona" >
 		</div>
@@ -29,7 +29,7 @@ entre ellos, contamos también con ganadores de Premios Nobel. Al día de hoy, m
 </div>
 
 <div class="row">
-	<div class="col-sm-8">
+	<div class="col-md-8">
 		<div class="panel panel-default">
   			<div class="panel-heading"><h3 class="text-center">Listado de Revistas</h3></div>
   			<div class="panel-body">
@@ -38,19 +38,11 @@ entre ellos, contamos también con ganadores de Premios Nobel. Al día de hoy, m
 			</div>
 		</div>
 	</div>
-	<div class="col-sm-4">
+	<div class="col-md-4">
 		<div class="panel panel-default">
   			<div class="panel-heading"><h3>Noticias</h3></div>
   			<div class="panel-body">
-  				<ul>
-  					<li><a href="#">9 revistas de MDPI han sido incluídas en el registro Emerging Sources Citation Index (ESCI).</a></li>
-  					<li><a href="#">Impact Factor de 2015 para las revistas de MDPI.</a></li>
-  					<li><a href="#">Colaborar como peer-reviewer.</a></li>
-  					<li><a href="#">MDPI anuncia nuevas colaboraciones con universidades americanas, asiáticas y europeas.</a></li>
-  					<li><a href="#">La nueva plataforma de MDPI para E-books.</a></li>
-  					<li><a href="#">Las revistas de MDPI Proteomes y Journal of Risk and Financial Managament incluidas en el Emerging Sources Citation Index (ESCI).</a></li>
-  					<li><a href="#">Nueva oficina de MDPI en Barcelona.</a></li>
-  				</ul>		
+				{{ render(controller('MDPIEsBundle:News:newsList')) }}	
   			</div>
 		</div>
 			<div class="panel panel-default">

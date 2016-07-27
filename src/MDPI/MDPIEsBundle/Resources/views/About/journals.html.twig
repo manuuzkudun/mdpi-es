@@ -18,10 +18,9 @@
 	</thead>
 	<tbody>
     {% for journal in journals %}
-    {% set journal_url = '#' %}
 		<tr style='font-size: 10pt;'>
-			<td width="20%" align="left"><a href="{{ journal_url }}"><img src="{{ "http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}" }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" border="0" height="70"></a></td>
-			<td width="20%" align="left"><a href="{{ journal_url }}">{{ journal.nameFull }}</a></td>
+			<td width="20%" align="left"><a href="http://www.mdpi.com/journal/{{ journal.nameSystem }}"><img src="{{ "http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}" }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" border="0" height="70"></a></td>
+			<td width="20%" align="left"><a href="http://www.mdpi.com/journal/{{ journal.nameSystem }}">{{ journal.nameFull }}</a></td>
 			<td width="10%" align="left">ISSN {{ journal.issnElectronic }}</td>
 			<td width="10%" align="left">{{ journal.establishedYear }}</td>
 			<td width="20%" align="left">
