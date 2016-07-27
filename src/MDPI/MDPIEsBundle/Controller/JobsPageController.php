@@ -229,9 +229,7 @@ class JobsPageController extends Controller
 
     public function jobsAction()
     {
-        return $this->render('MDPIEsBundle:Jobs:jobs.html.twig', array(
-			'jobs' => $this->jobList
-		));
+        return $this->render('MDPIEsBundle:Jobs:jobs.html.twig');
     }
 	
 	public function jobAdAction($slug)

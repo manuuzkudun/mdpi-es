@@ -1,7 +1,7 @@
 <div>
-<ul>
+	<ul>
 	{% for job in jobs %}
-		<li><a href="/jobs/{{ job.slug }}">{{ job.title }}.</a></li>
+		<li><a href="{{ path('_job', {'slug': job.slug}) }}">{{ job.title }}.</a></li>
 	{% endfor %}
-</ul>
+	</ul>
 </div>

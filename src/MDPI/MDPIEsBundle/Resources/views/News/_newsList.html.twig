@@ -1,7 +1,7 @@
  <div>
  	<ul>
  	{% for news in newsList %}
-		<li><a href="/news/{{ news.slug }}">{{ news.title }}.</a></li>
+		<li><a href="{{ path('_news',{'slug': news.slug}) }}">{{ news.title }}.</a></li>
 	{% endfor %}
   	</ul>	
  </div>

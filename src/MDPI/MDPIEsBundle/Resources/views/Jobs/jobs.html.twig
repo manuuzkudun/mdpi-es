@@ -6,16 +6,9 @@ Trabaja con nosotros
 
 {% block content %}
 
-	<h2 class= "about-titulo">Trabaja con nosotros</h2>
+	<h2 class= "about-titulo">Trabaja con Nosotros</h2>
 	<div style="margin-top: 20px; margin-left: 20px;">
 		<p>En la actualidad estamos buscando los perfiles siguientes:</p>
-	<div>
-		<ul>
-		{% for job in jobs %}
-			<li><a href="/jobs/{{ job.slug }}">{{ job.title }}</a></li>
-		{% endfor %}
-		</ul>
-	</div>
-	
+		{{ render(controller('MDPIEsBundle:JobsPage:jobList')) }}
 	</div>
 {% endblock %}
