@@ -1,6 +1,6 @@
 {% extends "MDPIEsBundle::base.html.twig" %}
 
-{% block title %}MDPI | Revistas{% endblock %}
+{% block title %}MDPI | Listado de Revistas{% endblock %}
 
 {% block content %}
 
@@ -18,8 +18,8 @@
 	</thead>
 	<tbody>
     {% for journal in journals %}
-		<tr style='font-size: 10pt;'>
-			<td width="20%" align="left"><a href="http://www.mdpi.com/journal/{{ journal.nameSystem }}"><img src="{{ "http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}" }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" border="0" height="70"></a></td>
+		<tr style='font-size: 10pt;' class="{{ cycle(['journal-even','journal-odd'],loop.index0) }}">
+			<td width="20%" align="left"><a href="http://www.mdpi.com/journal/{{ journal.nameSystem }}"><img src='{{ asset("http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}") }}' alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" border="0" height="70"></a></td>
 			<td width="20%" align="left"><a href="http://www.mdpi.com/journal/{{ journal.nameSystem }}">{{ journal.nameFull }}</a></td>
 			<td width="10%" align="left">ISSN {{ journal.issnElectronic }}</td>
 			<td width="10%" align="left">{{ journal.establishedYear }}</td>
