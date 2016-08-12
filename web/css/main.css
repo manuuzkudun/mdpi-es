@@ -1,0 +1,175 @@
+
+/* Generic Styles */
+
+body { 
+	background-color: #F8F7F7;
+}
+
+p {
+	font-size: 16px;
+}
+a {
+	font-size: 16px;
+}
+li {
+  	font-size: 16px;
+}
+
+a:link {
+  	color: #3156A2;
+    text-decoration: none;
+}
+a:visited {
+  	color: #934E4E;
+  	color: #3156A2;
+}
+
+a:hover{
+	color: #3E6ED1; 
+}
+
+/* Content from the about section */  	
+.about-titulo{
+ 	color: #48516D;
+    margin: 20px auto;
+    font-weight: bold;
+    text-shadow: 1px 1px #999;
+    text-transform: capitalize;
+}
+
+.about-content h3{
+ 	color: #48516D;
+}
+       
+.about-content p{
+	line-height: 25px;
+	margin: 20px 0;
+	padding: 0 20px;      
+}
+
+.about-content li{
+	line-height: 25px;
+	margin: 20px 0;      
+}
+ 
+#mdpi-history span.about-history-year{
+   font-weight: bold;
+   color: #5f6884;
+}
+ 
+#mdpi-resume{
+	padding: 20px; 
+	margin: 40px 80px;
+	background-color: #F2F7FF;
+}
+#mdpi-oficinas img{
+	margin:20px auto;
+}
+
+#mdpi-oficinas h3{
+ 	color: #48516D;
+ 	font-weight: bold;
+ 	margin-left: 10px;
+}
+
+
+/* Main Navigation Menu */  
+.navbar {
+	margin:0;
+}
+.navbar-inverse {
+	background-color: #1F1D33;
+    border-color: #1F1D33;
+}
+.navbar-nav>li>.dropdown-menu {
+	background-color: #1F1D33;
+}
+#main-nav a.nav-link {
+	color: white;
+  	font-weight:bold;
+}
+#main-nav a.nav-link:hover{
+	color: #E6B043;
+}
+.dropdown-menu>li>a {
+	color: white;
+  	font-weight:bold;
+}
+.dropdown-menu>li>a:hover { 
+  	background-color: #1F1D33;
+    color: #E6B043;
+}
+
+.navbar-inverse .navbar-nav>.active>a{	
+	background-color:#1F1D33;
+}
+
+.navbar-inverse .navbar-nav>.active>a:hover{	
+	background-color:#1F1D33;
+}
+
+    
+/* Main Footer */    
+footer#main-footer{
+	background-color: #1F1D33;
+    color: white;
+    padding: 15px;
+}
+    
+/* Journals */
+.journal-even{
+  	background-color: #F0F0F6;
+ }
+.journal-odd{
+  background-color: #fff;
+}
+
+.journal-list-element:hover{
+	background-color: #F0F0F6;
+	box-shadow:         inset 0 0 10px #E2E2E2;
+}
+
+/* */
+.journalName{
+  	font-style:italic;
+}
+
+
+
+  ul#mdpi-history li{
+  	margin: 10px 0;
+  }
+    .main-content{
+    height: 1200px;
+    }
+
+.panel-default>.panel-heading{
+
+	background-color: #565B79;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #1F1D33;
+    border-color: #565B79;
+    font-weight: bold;
+}
+
+
+.btn-primary:hover {
+    background-color: #1F1D33;
+    border-color: #565B79;
+    color: #E6B043;
+}
+
+.panel-heading h3{
+	color: white;
+	font-weight: bold;
+	margin: 0;
+	margin-top: 10px;
+	text-shadow: 1px 1px #555;
+	
+
+}
+
