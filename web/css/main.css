@@ -39,6 +39,7 @@ a:hover{
 
 .about-content h3{
  	color: #48516D;
+ 	text-transform: capitalize;
 }
        
 .about-content p{
