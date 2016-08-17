@@ -37,7 +37,4 @@ _job:
     defaults: { _controller: MDPIEsBundle:JobsPage:jobAd}
     
 
-_news:
-    path:      /news/{slug}
-    defaults: { _controller: MDPIEsBundle:News:newsItem}
     
