@@ -36,5 +36,14 @@ _job:
     path:     /jobs/{slug}
     defaults: { _controller: MDPIEsBundle:JobsPage:jobAd}
     
+_announcements:
+    path:     /announcements
+    defaults: { _controller: MDPIEsBundle:Announcements:announcementsListAll}
+    
+_announcement:
+    path:     /announcement/{id}
+    defaults: { _controller: MDPIEsBundle:Announcements:announcementShow}
+    
+    
 
     

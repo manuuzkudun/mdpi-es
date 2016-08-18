@@ -31,7 +31,7 @@ a:hover{
 /* Content from the about section */  	
 .about-titulo{
  	color: #48516D;
-    margin: 20px auto;
+    margin: 20px 20px;
     font-weight: bold;
     text-shadow: 1px 1px #999;
     text-transform: capitalize;

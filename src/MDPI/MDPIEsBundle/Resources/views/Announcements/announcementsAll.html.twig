@@ -1,8 +1,20 @@
- <div>
- 	<ul style="padding-left: 20px;">
+{% extends "MDPIEsBundle::base.html.twig" %} 
+ 
+{% block title %}
+MDPI | Noticias
+{% endblock %}
+
+{% block content %}
+<h2 class="about-titulo">Noticias de MDPI</h2>
+
+ <div style="padding: 20px;">
+ 	<ul>
  	{% for announcement in announcements %}
 		<li style="margin: 10px 0;"><a href="{{ path('_announcement', {'id': announcement.id}) }}">{{ announcement.title | raw }}</a> ({{ announcement.getFormatedDate('Y-m-d') }}).</li>
 	{% endfor %}
   	</ul>
-  	<a class="nav-link" href="{{ path('_announcements') }}"><button type="button" class="btn btn-primary center-block">Ver Todas</button></a>	
  </div>
+{% endblock %}
+ 
+ 
+

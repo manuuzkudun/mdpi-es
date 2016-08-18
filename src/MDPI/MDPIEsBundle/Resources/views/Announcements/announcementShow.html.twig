@@ -1,0 +1,15 @@
+{% extends "MDPIEsBundle::base.html.twig" %}
+
+
+{% block title %}
+MDPI | {{announcement.title}}
+{% endblock %}
+
+
+{% block content %}
+<div class = "about-content">
+<h3 style = "margin-left: 20px;margin-bottom: 40px;">{{announcement.title | raw}}</h3>
+
+	{{announcement.content| raw}}
+</div>
+{% endblock %}

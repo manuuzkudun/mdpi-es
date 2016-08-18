@@ -18,4 +18,28 @@ class AnnouncementsController extends Controller
 			'announcements' => $announcements
 		));
 	}
+	
+	
+	
+	public function announcementsListAllAction()
+	{
+		
+		$announcements = AnnouncementRepository::getHomepageAnnouncements($limit = NULL);
+		
+		return $this->render('MDPIEsBundle:Announcements:announcementsAll.html.twig',array(
+			'announcements' => $announcements
+		));
+	}
+	
+	
+	public function announcementShowAction($id)
+	{
+		
+		$announcement = AnnouncementRepository::getOneById($id);
+		
+		return $this->render('MDPIEsBundle:Announcements:announcementShow.html.twig',array(
+			'announcement' => $announcement
+		));
+	}
+	
 }
