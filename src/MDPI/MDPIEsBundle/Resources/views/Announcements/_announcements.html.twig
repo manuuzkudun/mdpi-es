@@ -1,7 +1,8 @@
  <div>
  	<ul style="padding-left: 20px;">
  	{% for announcement in announcements %}
-		<li style="margin: 10px 0;"><a href="{{ path('_announcement', {'id': announcement.id}) }}">{{ announcement.title | raw }}</a> ({{ announcement.getFormatedDate('Y-m-d') }}).</li>
+		<li><a href="{{ path('_announcement', {'id': announcement.id}) }}">{{ announcement.title | raw }}</a> ({{ announcement.getFormatedDate('Y-m-d') }}).</li>
+		<hr style= "margin: 10px 0;">
 	{% endfor %}
   	</ul>
   	<a class="nav-link" href="{{ path('_announcements') }}"><button type="button" class="btn btn-primary center-block">Ver Todas</button></a>	

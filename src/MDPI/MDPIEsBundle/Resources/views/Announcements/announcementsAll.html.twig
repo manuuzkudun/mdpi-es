@@ -11,6 +11,7 @@ MDPI | Noticias
  	<ul>
  	{% for announcement in announcements %}
 		<li style="margin: 10px 0;"><a href="{{ path('_announcement', {'id': announcement.id}) }}">{{ announcement.title | raw }}</a> ({{ announcement.getFormatedDate('Y-m-d') }}).</li>
+		<hr style= "margin: 10px 0;">
 	{% endfor %}
   	</ul>
  </div>
