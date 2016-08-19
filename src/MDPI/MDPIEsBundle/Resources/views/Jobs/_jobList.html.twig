@@ -1,8 +1,7 @@
 <div>
 	<ul style="padding-left: 20px;">
 	{% for job in jobs %}
-		<li><a href="{{ path('_job', {'slug': job.slug}) }}">{{ job.title }}.</a></li>
-		<hr style= "margin: 10px 0;">
+		<li style="margin: 10px 0;"><a href="{{ path('_job', {'id': job.id}) }}">{{ job.title }}.</a></li>
 	{% endfor %}
 	</ul>
 </div>

@@ -1,0 +1,22 @@
+{% extends "MDPIEsBundle::base.html.twig" %}
+
+
+{% block title %}
+MDPI | {{job.title}}
+{% endblock %}
+
+
+{% block content %}
+<div style="margin: 40px;margin-bottom: 40px;">
+	<h2 style="color:#565B79;margin-bottom: 40px;font-weight:bold;">{{job.title}}</h2>
+
+	<div class="about-content" >
+		{{ job.content | raw }}
+	</div>
+
+	<div>
+		<img class="img-responsive center-block" src="/images/mdpi-pub-logo.png" alt="MDPI Open Access">
+	</div>
+	
+</div>
+{% endblock %}
