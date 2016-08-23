@@ -116,7 +116,26 @@ footer#main-footer{
     color: white;
     padding: 15px;
 }
-    
+
+.footer-block{
+	margin-top: 20px;
+	margin-left: 20px;
+	text-align: center;
+}
+
+.footer-block h4{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+@media screen and (min-width: 992px) {
+    .footer-block {
+        text-align: left;
+    }
+}
+
+
 /* Journals */
 .journal-even{
   	background-color: #F0F0F6;
