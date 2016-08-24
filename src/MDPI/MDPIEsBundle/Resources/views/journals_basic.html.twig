@@ -7,7 +7,7 @@
 				<div style="list-style: none;margin: 10px 0;">
 					<a href="http://www.mdpi.com/journal/{{ journal.nameSystem }}"><img src="{{ "http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}" }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" height="50"></a>
 					<a href="http://www.mdpi.com/journal/{{ journal.nameSystem }}"><div style="display: inline;float: right; background-color: #FFB800; width: 50px;height:50px;font-weight:bold;border-radius:50%;margin-right:20px;box-shadow:#555 1px 1px 2px;">
-						<p style="text-align:center; margin-top:15px;font-size: 13px;color: #1F1D33;">{{journal.impactFactor|default(0)}}</p>
+						<p style="text-align:center; margin-top:2px;font-size: 13px;color: #1F1D33;"><span style = "font-size: 9px;">I.F</span><br>{{journal.impactFactor|default(0)}}</p>
 					</div></a>
 				</div>
 			</div>
