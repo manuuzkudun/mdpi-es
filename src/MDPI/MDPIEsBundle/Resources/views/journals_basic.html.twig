@@ -7,9 +7,9 @@
 				<div style="padding: 10px 0;">
 					<a href="http://www.mdpi.com/journal/{{ journal.nameSystem }}"><img src="{{ "http://www.mdpi.com/img/journals/#{journal.logoFilenameWithHash}" }}" alt="{{ journal.nameSystem }}-logo" title="{{ journal.nameShort }} Open Access Journal" height="45"></a>
 					<a href="http://www.mdpi.com/journal/{{ journal.nameSystem }}">
-						<div style="display: inline;float: right; background-color: #FFB800; width: 50px;height:50px;font-weight:bold;border-radius:50%;box-shadow:#555 1px 1px 2px;text-align:center;margin: auto 0;">
-							<div style = " margin-top:10px;font-size: 9px;color: gray;text-transform: uppercase;line-height: 90%;">Impact<br>Factor</div>
-							<div style="font-size: 13px;color: #1F1D33;">{{journal.impactFactor|default(0)}}</div>
+						<div style="display: inline;float: right; background-color: #FFB800; width: 50px;height:50px;font-weight:bold;border-radius:50%;box-shadow:#555 1px 1px 2px;text-align:center;margin: auto 0; font-family: Georgia,'Times New Roman',serif;">
+							<div style = " margin-top:10px;font-size: 9px;color: #555 ;text-transform: uppercase;line-height: 90%;">Impact<br>Factor</div>
+							<div style="font-size: 13px;color: #000;">{{journal.impactFactor|default(0)}}</div>
 						</div>
 					</a>
 				</div>
