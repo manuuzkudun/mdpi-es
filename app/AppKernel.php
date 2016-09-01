@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new MDPI\MDPIEsBundle\MDPIEsBundle(),
         	new MDPI\AppBundle\MDPIAppBundle(),
+        	new MDPI\SudaBundle\MDPISudaBundle(),
             
             // GFinder
             new GFinder\GFinderBundle($this),		

@@ -697,7 +697,34 @@
             "description": "MDPIGFinderBundle",
             "homepage": "http://www.mdpi.com",
             "time": "2014-02-24 09:00:07"
-        }, 
+        },
+        {
+            "name": "mdpi/suda-bundle",
+            "version": "dev-master",
+            "target-dir": "MDPI/SudaBundle",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@dev.mdpi.lab:22/~/projects/bundles/SudaBundle.git",
+                "reference": "6cc369f176319cc5fad87ec3786b139b1903c86f"
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "MDPI\\SudaBundle\\": ""
+                }
+            },
+            "description": "MDPISudaBundle",
+            "homepage": "http://www.mdpi.com",
+            "time": "2016-04-07 06:25:18"
+        },
         
         {
             "name": "doctrine/orm",
@@ -2230,7 +2257,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
 		"mdpi/app-bundle": 20,
-		"mdpi/gfinder-bundle": 20
+		"mdpi/gfinder-bundle": 20,
+		"mdpi/suda-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
