@@ -159,6 +159,15 @@ footer#main-footer{
 
 
 
+ul.list-with-separators{
+	padding-left: 20px;
+}
+
+ul.list-with-separators > li:last-child hr{
+	display: none;
+}
+
+
   ul#mdpi-history li{
   	margin: 10px 0;
   }

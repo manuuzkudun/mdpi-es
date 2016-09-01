@@ -1,11 +1,5 @@
-<style>
-	ul > li:last-child hr{
- 	display: none;
-	}
-</style>
-
 <div>
-	<ul style="padding-left: 20px; margin-bottom: 0 !important;">
+	<ul class="list-with-separators" margin-bottom: 0 !important;">
 	{% for job in jobs %}
 		<li><a href="{{ path('_job', {'id': job.id}) }}">{{ job.title | raw }}</a><hr style= "margin: 10px 0;"></li>
 	{% endfor %}
