@@ -8,7 +8,7 @@ MDPI | Noticias
 <h2 class="about-titulo">Noticias de MDPI</h2>
 
  <div>
- 	<ul class="list-with-separators" style="padding: 0 40px;">
+ 	<ul class="list-with-separators">
  	{% for announcement in announcements %}
 		<li style="margin: 10px 0;"><a href="{{ path('_announcement', {'id': announcement.id}) }}">{{ announcement.title | raw }}</a> 
 		({{ announcement.getFormatedDate('Y-m-d') }})<hr style= "margin: 10px 0;"></li>

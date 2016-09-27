@@ -48,7 +48,6 @@ a:hover{
 .about-content p{
 	line-height: 25px;
 	margin: 20px 0;
-	padding: 0 20px;      
 }
 
 .about-content li{
@@ -63,7 +62,7 @@ a:hover{
  
 #mdpi-resume{
 	padding: 20px; 
-	margin: 40px 80px;
+	margin: 40px 0;
 	background-color: #F2F7FF;
 }
 #mdpi-oficinas img{
@@ -167,6 +166,9 @@ ul.list-with-separators > li:last-child hr{
 	display: none;
 }
 
+ul#mdpi-history{
+	padding-left: 20px;
+}
 
   ul#mdpi-history li{
   	margin: 10px 0;
@@ -201,7 +203,24 @@ ul.list-with-separators > li:last-child hr{
 	margin: 0;
 	margin-top: 10px;
 	text-shadow: 1px 1px #555;
-	
+
+}
+
+/* media queries */
+
+
+@media screen and (min-width: 480px) {
+    #mdpi-resume {
+        margin: 40px 80px;
+    }
+    #home-presentation {
+    	margin-left: 20px;
+    	margin-right: 20px;
+    }
+    .about-content p{
+    	padding: 0 20px;
+    }
+    	   
 
 }
 
