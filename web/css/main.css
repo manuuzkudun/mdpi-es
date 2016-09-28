@@ -244,7 +244,17 @@ ul#mdpi-history{
     .about-content p{
     	padding: 0 20px;
     }
-    	   
-
+    
 }
 
+
+@media only screen and (max-width: 640px) {
+	table#all-journals-table td:nth-child(2),
+	table#all-journals-table th:nth-child(2),
+   	table#all-journals-table td:nth-child(3),
+	table#all-journals-table th:nth-child(3),
+	table#all-journals-table td:nth-child(4),
+	table#all-journals-table th:nth-child(4),
+	table#all-journals-table td:nth-child(5),
+	table#all-journals-table th:nth-child(5){display: none;}
+}
