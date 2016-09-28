@@ -9,13 +9,13 @@ body {
 }
 
 p {
-	font-size: 16px;
+	font-size: 1.1em;
 }
 a {
-	font-size: 16px;
+	font-size: 1.1em;
 }
 li {
-  	font-size: 16px;
+  	font-size: 1.1em;
 }
 
 a:link {
@@ -31,6 +31,21 @@ a:hover{
 	color: #3E6ED1; 
 }
 
+
+
+h2{
+font-size: 2.1em!important;
+}
+
+h3{
+font-size: 1.75em!important;
+}
+h4{
+font-size: 1.5em!important;
+}
+h4{
+font-size: 1.3em!important;
+}
 
 
 /* Header logo */
